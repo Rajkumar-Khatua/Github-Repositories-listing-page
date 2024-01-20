@@ -140,6 +140,10 @@ function renderPagination() {
     pageLink.textContent = i;
     pageLink.onclick = () => goToPage(i);
 
+    if (i === currentPage) {
+      pageLink.classList.add("current-page");
+    }
+
     paginationContainer.appendChild(pageLink);
   }
 }
@@ -151,7 +155,7 @@ async function goToPage(page) {
   renderRepositories(repositories);
 }
 
-// Add this function to handle repository search
+//  this function to handle repository search
 function searchByRepo() {
   const searchTerm = document
     .getElementById("search-repo-input")
@@ -162,7 +166,7 @@ function searchByRepo() {
   renderRepositories(filteredRepos);
 }
 
-// Add this function to toggle sorting by date
+//  this function to toggle sorting by date
 function toggleSortByDate() {
   sortByDate = !sortByDate;
   repositories.sort((a, b) => {
@@ -173,7 +177,7 @@ function toggleSortByDate() {
   renderRepositories(repositories);
 }
 
-// Add this function to generate random color for topics and languages
+//  this function to generate random color for topics and languages
 function getRandomColor() {
   const letters = "0123456789ABCDEF";
   let color = "";

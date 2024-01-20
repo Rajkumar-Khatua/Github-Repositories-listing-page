@@ -74,7 +74,8 @@ body {
   border-radius: 30px;
   font-size: 16px;
 }
-#repo-count-select, #repo-count-select option {
+#repo-count-select,
+#repo-count-select option {
   color: #000000;
 }
 .loader-container {
@@ -231,18 +232,24 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
+.page-link.current-page {
+  background-color: #ff5a5a; 
+  color: #fff;
+}
 
 .user-card p,
-.repo-card p, a {
+.repo-card p,
+a {
   margin: 8px 0;
   text-decoration: none;
   color: #000;
 }
-.fa-map-marker-alt,.fa-twitter,.fa-github{
+.fa-map-marker-alt,
+.fa-twitter,
+.fa-github {
   margin-right: 10px;
   font-size: 20px;
 }
-
 
 .topics span,
 .languages span {
@@ -254,7 +261,6 @@ body {
   color: #fff;
 }
 
-/* Add this styling for the new elements */
 .repo-options {
   display: flex;
   align-items: center;
@@ -296,4 +302,3 @@ body {
 #search-repo-input:focus::placeholder {
   color: #ccc;
 }
-
